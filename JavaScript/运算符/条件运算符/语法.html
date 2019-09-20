@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="red demo" id="div"></div>
+    <script>
+        var a = 10
+        var b = 20
+        a < b ? alert('Yes') : alert('No')
+        
+        HTMLElement.prototype.replaceClassName = function(newName, oldName){
+            this.setAttribute('class', this.getAttribute('class').replace(oldName, newName))
+        }
+        div.onclick = function(){
+            this.className == 'red' ? this.className = 'blue' : this.className = 'red'
+            // this.replaceClassName('blue', 'red')
+        }
+
+        
+    </script>
+</body>
+</html>
