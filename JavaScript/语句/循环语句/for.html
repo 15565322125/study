@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //初始值:从几开始的那个值，x~y
+        var x = 0
+        //虽然初始值是一定的，但是这个值是在变化中的，并且达到最终目的值时停止
+        var y = 10
+
+        for(; x < y; x++){
+            console.log(x)
+        }
+
+        for(var i=1, result=0; i<=10; i++){
+            result += i
+        }
+		alert(result)
+    </script>
+</body>
+</html>
