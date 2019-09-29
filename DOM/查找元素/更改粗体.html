@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mytag">h111111111111111</h1>
+    <!-- h1 ~ h6 -->
+    <b></b>
+    <strong></strong>
+
+    <div id="hello">你好</div>
+    <span id="myName">我是</span>
+    <a href="" id="n">xxx</a>
+    <script>
+        var mytag = document.getElementById('mytag')
+        // 方法一
+        if(mytag.tagName == 'B' || mytag.tagName == 'STRONG' || mytag.tagName == 'H1' || mytag.tagName == 'H2' || mytag.tagName == 'H3' || mytag.tagName == 'H4' || mytag.tagName == 'H5' || mytag.tagName == 'H6'){
+            mytag.style.fontWeight = 400
+        }
+        // 方法二
+        // 不管是不是粗体统一变为细体
+        mytag.style.fontWeight = 400
+
+        // 方法三
+        var arr = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'B', 'STRONG']
+        var isTrue = arr.indexOf(mytag.tagName)
+        if(isTrue != -1){
+            mytag.style.fontWeight = 200
+        }
+
+        hello.style.display = myName.style.display = n.style.display = 'inline'
+        hello.style.fontWeight = myName.style.fontWeight = n.style.fontWeight = '900'
+        hello.style.color = myName.style.color = n.style.color = 'red'
+        hello.style.fontSize = myName.style.fontSize = n.style.fontSize = '24px'
+    </script>
+</body>
+</html>

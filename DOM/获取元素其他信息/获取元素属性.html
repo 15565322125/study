@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d" class="box" data-www="yes" lm="19"></div>
+    <a href="https://www.baidu.com"></a>
+    <!-- 设置元素属性 -->
+    <div class="sss">sss</div>
+    <a href="1.html" class="a">baidu</a>
+    <script>
+        console.log(d.getAttribute('lm'), d.getAttribute('class'), d.getAttribute('data-www'))
+        console.log(document.getElementsByTagName('a')[0])
+
+
+
+        // 设置元素属性
+        console.log(d.setAttribute('lm', 20))
+
+        document.getElementsByClassName('sss')[0].setAttribute('id', 's')
+        document.getElementsByClassName('a')[0].setAttribute('href', 'https://www.baidu.com')
+        document.getElementsByClassName('a')[0].setAttribute('target', '_blank')
+    </script>
+</body>
+</html>

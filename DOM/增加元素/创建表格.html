@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            position: relative;
+        }
+        #box > div{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            background-image: url(../1.jpeg);
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        /*for(var i=0; i<100; i++){
+            var div = document.createElement('div')
+            div.style.left = i % 10 * 50 + 'px'
+            div.style.top = Math.floor(i / 10) * 50 + 'px'
+            box.appendChild(div)
+        }*/
+
+
+        for(var i=0; i<10; i++){
+            for(var j=0; j<10; j++){
+                var div = document.createElement('div')
+                div.style.left = j * 50 + 'px'
+                div.style.top = i * 50 + 'px'
+                box.appendChild(div)
+
+                div.style.backgroundPosition = 
+
+                div.onclick = function(){
+                    this.style.backgroundColor = 'red'
+                }
+            }
+        }
+    </script>
+</body>
+</html>

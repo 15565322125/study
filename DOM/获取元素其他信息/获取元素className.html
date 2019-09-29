@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a{
+            width: 200px;
+            height: 200px;
+        }
+        .b{
+            background-color: red;
+        }
+        .c{
+            border-radius: 20px;
+        }
+        .d{
+            background-color: blue;
+        }
+
+        #d1{
+            width: 200px;
+            height: 200px;
+            border-width: 10px;
+            border-style: solid;
+        }
+        .red{
+            border-color: red;
+        }
+        .blue{
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv" class="a b c">adfsdgad</div>
+
+    <div id="d1" class="red"></div>
+    <button id="btn">click</button>
+    <script>
+        var div = document.getElementById('mydiv')
+        console.log(div.className)
+        div.className = 'a c d'
+
+        btn.onclick = function(){
+            d1.className = 'blue'
+        }
+    </script>
+</body>
+</html>

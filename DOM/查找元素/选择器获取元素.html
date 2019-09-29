@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li class="a">1</li>
+        <li class="a">2</li>
+        <li class="b">3</li>
+        <li id="c">4</li>
+    </ul>
+    <div id="div">
+        <div>
+            <span><a href="">wwwwww</a></span>
+        </div>
+        <div></div>
+    </div>
+    <script>
+        var ul = document.getElementById('ul')
+        var x = document.querySelectorAll('li')
+        var y = document.getElementsByTagName('li')
+        var a = document.querySelector('#ul')
+        
+        // a.appendChild(document.createElement('li'))
+        // var div = document.getElementById('div')
+        ul.appendChild(document.createElement('li'))
+
+        console.log(x, y)
+    </script>
+</body>
+</html>

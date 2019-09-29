@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+        <input type="radio" name="sex" value="male">男
+    </label>
+    <label>
+        <input type="radio" name="sex" value="fmale">女
+    </label>
+    
+    <br>
+    <input type="checkbox" name="ball">篮球
+    <input type="checkbox" name="ball">足球
+    <input type="checkbox" name="ball">网球
+    <script>
+        var sex = document.getElementsByName('sex')
+        console.log(sex)//NodeList
+        var ball = document.getElementsByName('ball')
+        console.log(ball)//NodeList
+    </script>
+</body>
+</html>
