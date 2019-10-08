@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #img{
+            position: absolute;
+            left: 600px;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            transition: .1s;
+        }
+    </style>
+</head>
+<body>
+    <div id="img"></div>
+    <script>
+        document.onkeydown = function(e){
+            console.log('keydown', e.keyCode)
+            switch(e.keyCode){
+                case 37:
+                    img.style.left = img.offsetLeft - 50 + 'px'
+                    break
+                case 39:
+                    img.style.left = img.offsetLeft + 50 + 'px'
+                    break
+                case 38:
+                    img.style.top = img.offsetTop - 50 + 'px'
+                    break
+                case 40:
+                    img.style.top = img.offsetTop + 50 + 'px'
+                    break
+            }
+        }
+        document.onkeyup = function(){
+            console.log('onkeyup')
+        }
+    </script>
+</body>
+</html>

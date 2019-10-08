@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">btn1</button>
+    <button id="btn2">btn2</button>
+    <script>
+
+        // 增加监听             监听事件，方法，冒泡
+        //btn2.addEventListener('click', a, false)
+        
+        btn1.addEventListener('mousedown', a, false)
+        btn2.addEventListener('mousedown', a, false)
+        btn1.addEventListener('mouseup', b, false)
+        btn2.addEventListener('mouseup', b, false)
+        function a(){
+            console.log('鼠标按下')
+        }
+        function b(){
+            console.log('鼠标抬起')
+        }
+    </script>
+</body>
+</html>

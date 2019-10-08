@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>resize</title>
+</head>
+<body>
+    <script>
+        window.onresize = function(){
+            var r = Math.floor(Math.random() * 256)
+            var g = Math.floor(Math.random() * 256)
+            var b = Math.floor(Math.random() * 256)
+            
+            var a = Math.random()
+            document.body.style.backgroundColor = 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')'
+        }
+        console.log(Math.floor(Math.random() * 11) / 10);
+        
+    </script>
+</body>
+</html>

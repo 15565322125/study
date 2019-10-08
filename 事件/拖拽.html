@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            margin-top: 200px;
+            padding: 20px;
+            border: 20px solid blue;
+            background-color: #0f0;
+            background-origin: content-box;
+            background-clip: content-box;
+        }
+        #mydiv img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <img src="wx.jpg" alt="" id="img" draggable="false">
+    </div>
+    <div id="box"></div>
+    <script>
+        mydiv.onmousedown = function(e){
+            var disX = e.clientX - this.offsetLeft,
+                disY = e.clientY - this.offsetTop
+            // var x = e.clientX,
+            //     y = e.clientY
+            document.onmousemove = function(e){
+                var moveX = e.clientX - disX
+                var moveY = e.clientY - disY
+                
+                // var moveX = mydiv.offsetLeft + e.clientX - x
+                // var moveY = mydiv.offsetTop + e.clientY - y
+                mydiv.style.left = moveX + 'px'
+                mydiv.style.top = moveY + 'px'
+                // x = e.clientX
+                // y = e.clientY
+            }
+            document.onmouseup = function(){
+                this.onmousemove = null
+                this.onmouseup = null
+            }
+            // 取消冒泡
+            return false
+        }
+
+        box.onclick = function(e){
+            console.log(e.offsetX, e.offsetY)
+        }
+    </script>
+</body>
+</html>

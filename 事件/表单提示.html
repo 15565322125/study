@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            visibility: hidden;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label>
+            用户名：<input type="text" id="txt" placeholder="请输入用户名"><span id="txtError"></span>
+        </label>
+        <br>
+        <label>
+            密码：<input type="password" id="psd" placeholder="请输入密码"><span id="psdError"></span>
+        </label>
+        <br>
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        var name = ['tom', 'jack', 'lili']
+        txt.onfocus = function(){
+            txtError.style.visibility = 'visible'
+            txtError.innerHTML = '请输入用户名'
+        }
+        txt.onblur = function(){
+            if(this.value == ''){
+                txtError.innerHTML = '请输入用户名'
+                return
+            }
+            if(name.indexOf(this.value) == -1){
+                txtError.innerHTML = '该用户名可以使用'
+            }else{
+                txtError.innerHTML = '该用户名已存在'
+            }
+            
+        }
+    </script>
+</body>
+</html>

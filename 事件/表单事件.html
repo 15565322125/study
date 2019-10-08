@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1">
+    <script>
+        in1.onfocus = function(){
+            console.log('focus')
+            this.style.backgroundColor = '#008c8c'
+        }
+        in1.onblur = function(){
+            console.log('blur')
+            this.style.backgroundColor = '#ccc'
+        }
+    </script>
+</body>
+</html>

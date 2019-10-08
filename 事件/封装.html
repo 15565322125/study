@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv" class="wrap">1231</div>
+    <script>
+        var mydiv = document.getElementById('mydiv')
+
+        // 封装监听
+        function addEvent(elem, type, handle){
+            if(elem.addEventListener){
+                elem.addEventListener(type, handle, false)
+            }else if(elem.attachEvent){
+                elem.attachEvent('on' + type, handle)
+            }else{
+                elem['on' + type] = handle
+            }
+        }
+
+        function fn(){
+            console.log('click')
+        }
+        addEvent(mydiv, 'click', fn)
+        // 封装解绑
+        function removeEvent(elem, type, handle){
+            if(elem.removeEvent){
+                elem.removeEventListener(type, handle, false)
+            }else if(elem.detachEvent){
+                elem.detachEvent('on' + type, handle)
+            }else{
+                elem['on' + type] = null
+            }
+        }
+
+        /*
+        //封装监听
+        function addE(target,type,fn){
+            if(target,addEventListener){
+                target.addEventListener(type,fn);
+            }else {
+                target.attachEvent('on'+type,'fn');
+            }
+        }
+        addE(mydiv,'click',a);
+
+        //封装解绑
+        function removeE(target,type,fn){
+            if(target,removeEventListener){
+                target.removeEventListener(type,fn);
+            }else {
+                target.datachEvent('on'+type,'fn');
+            }
+        }
+        */
+
+        
+    </script>
+</body>
+</html>

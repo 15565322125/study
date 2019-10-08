@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: blue;
+        }
+        #mydiv{
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="mydiv">
+
+        </div>
+    </div>
+    <script>
+        var mydiv = document.getElementById('mydiv')
+        // 点击事件
+        mydiv.onclick = function(){
+            console.log('click')
+        }
+
+        // 双击事件
+        mydiv.ondblclick = function(){
+            console.log('双击事件')
+        }
+
+        // 鼠标按下事件
+        mydiv.onmousedown = function(e){
+            console.log('mousedown', e.button)
+        }
+
+        // 鼠标抬起
+        mydiv.onmouseup = function(){
+            console.log('mouseup')
+        }
+
+        // 鼠标移动
+        // mydiv.onmousemove = function(){
+        //     console.log('mousemove')
+        // }
+
+        // 鼠标移入
+        // mydiv.onmouseover = function(){
+        //     console.log('red')
+        // }
+        // box.onmouseover = function(){
+        //     console.log('blue')
+        // }
+
+        // 不会进行多次触发
+        // box.onmouseenter = function(){
+        //     console.log('blue')
+        // }
+        // mydiv.onmouseenter = function(){
+        //     console.log('red')
+        // }
+
+        //鼠标移出
+        // mydiv.onmouseout = function(){
+        //     console.log('red onmouseout')
+        // }
+        // box.onmouseout = function(){
+        //     console.log('blue onmouseout')
+        // }
+
+        
+
+        box.onmouseleave = function(){
+            console.log('blue onmouseleave')
+        }
+        mydiv.onmouseleave = function(){
+            console.log('red onmouseleave')
+        }
+    </script>
+</body>
+</html>

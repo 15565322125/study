@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgba(0,0,0,.3);
+        }
+        div{
+            float: left;
+            width: 200px;
+            height: 150px;
+            margin-right: 20px;
+            text-align: center;
+            border-radius: 2px;
+        }
+        img{
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wx">
+        <img src="wx.jpg" alt="">
+        微信
+    </div>
+    <div id="qq">
+        <img src="qq.png" alt="">
+        腾讯QQ
+    </div>
+    <script>
+        wx.addEventListener('click', handleClick, true)
+        qq.addEventListener('click', handleClick, true)
+        function handleClick(e){
+            e.stopPropagation()
+            removeBg()
+            this.style.backgroundColor = 'rgba(255,255,255,.3)'
+        }
+        wx.addEventListener('dblclick', wxDblClick, false)
+        qq.addEventListener('dblclick', wxDblClick, false)
+        function wxDblClick(e){
+            alert('欢迎打开' + this.innerText)
+            removeBg()
+        }
+        /*function qqDblClick(){
+            alert('欢迎打开qq')
+        }*/
+
+        document.addEventListener('click', removeBg, false)
+        function removeBg(){
+            wx.style.backgroundColor = ''
+            qq.style.backgroundColor = ''
+        }
+    </script>
+</body>
+</html>
